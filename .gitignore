@@ -1,0 +1,11 @@
+# Large archive files (GitHub rejects files over 100MB)
+*.zip
+jadeha-theme.zip
+
+# OS temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & scratch
+*.log

@@ -1,0 +1,52 @@
+@import url('assets/css/fonts.css');
+
+/*
+Theme Name: Jade Ha Picture - Luxury Studio
+Theme URI: https://jadehapicture.com
+Author: Jade Ha Studio
+Author URI: https://jadehapicture.com
+Description: Luxury Editorial Portrait Studio WordPress Theme inspired by Jade Ha Photography. Exact 1:1 replica of jadehastudio.com with genuine Typekit fonts (ambroise-std & calluna).
+Version: 1.2.1
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: Proprietary
+Text Domain: jadeha-theme
+*/
+
+:root {
+  --font-ambroise: 'ambroise-std', serif;
+  --font-calluna: 'calluna', Georgia, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: var(--font-calluna);
+  font-size: 14px;
+  line-height: 1.68;
+  letter-spacing: 0.45px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Specific body overrides for dark pages like Home and Portfolio */
+body.header-theme-transparent,
+body.home,
+body.page-template-page-portfolio {
+  background-color: #2b2421 !important;
+  color: #ffffff !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

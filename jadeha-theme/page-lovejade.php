@@ -1,0 +1,167 @@
+﻿<?php
+/**
+ * Template Name: About Jade (LoveJade)
+ * Template Post Type: page
+ *
+ * @package JadeHaTheme
+ */
+
+get_header();
+?>
+
+<!-- ================= MAIN EDITORIAL CONTENT (EXACT JADE HA) ================= -->
+<main class="pt-32 sm:pt-36 pb-20 px-6 sm:px-12 md:px-16 max-w-[1250px] mx-auto text-[#222222]">
+  <?php
+  if (have_posts()) :
+      while (have_posts()) : the_post();
+          $page_content = get_the_content();
+          if (!empty(trim($page_content))) :
+              the_content();
+          else :
+  ?>
+  <!-- Top Headline Block (Left Aligned) -->
+  <div class="max-w-[1050px]">
+    <h3 class="font-calluna text-[15px] uppercase tracking-[0.03em] leading-[1.6] text-[#333333] mb-3">
+      GETTING THAT PERFECT SHOT IS MY JOB.<br class="hidden sm:inline">
+      I’VE TRESPASSED, STOPPED TRAFFIC, SHIMMIED UNDER BARBED WIRE, SCARED OFF A RATTLESNAKE,<br class="hidden sm:inline">
+      SCALED THE OUTSIDE OF A FOUR-STORY BUILDING, AND HUNG BY MY ANKLES OFF A BOAT.
+    </h3>
+
+    <h2 class="font-ambroise uppercase text-[24px] sm:text-[32px] md:text-[38px] leading-tight tracking-[0.04em] text-[#222222] mb-6 font-light">
+      MY NAME IS JADE HA AND I’M A PHOTOGRAPHER.
+    </h2>
+
+    <hr class="border-t border-[#e5e5e5] my-6">
+
+    <!-- Bio Paragraph -->
+    <p class="font-calluna text-[15px] leading-[2.3] tracking-[0.03em] text-black mb-14">
+      I'm a <a href="<?php echo esc_url(home_url('/portfolio')); ?>" class="underline underline-offset-4 hover:text-[#ff9061] transition-colors">portrait</a> &amp; <a href="<?php echo esc_url(home_url('/portfolio')); ?>" class="underline underline-offset-4 hover:text-[#ff9061] transition-colors">fashion</a> photographer, a retoucher and <a href="<?php echo esc_url(home_url('/photographers-store')); ?>" class="underline underline-offset-4 hover:text-[#ff9061] transition-colors">an educator</a>—and I’ve spent my career creating beautiful photographs of women. My work is sensual, fashion-inspired, and a little <em class="italic">Vanity Fair</em>, with a team that takes care of everything from hair and makeup to styling, posing, and the final edits. Every shoot starts with you, what you love, what you’re drawn to, and how you want to see yourself. From there, we create something together that feels beautiful, polished, <em class="italic">and like you on your very best day.</em>
+    </p>
+  </div>
+
+  <!-- Middle Section: Portrait Image + Overlapping Quote Box + Daily Pleasures -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start my-12">
+    
+    <!-- Spacer column on large screens for exact editorial positioning -->
+    <div class="hidden lg:block lg:col-span-1 xl:col-span-2"></div>
+
+    <!-- Center: Portrait Image with Overlapping Quote Card -->
+    <div class="md:col-span-7 lg:col-span-6 xl:col-span-5 relative">
+      <div class="relative max-w-[440px] mx-auto md:mx-0">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/love-jade-dallas.jpg'); ?>" alt="Jade Ha Portrait" class="w-full h-auto block object-cover shadow-sm">
+        
+        <!-- Overlapping Black Card matching Squarespace Collage layout -->
+        <div class="bg-black text-white p-7 sm:p-8 max-w-[310px] sm:max-w-[340px] -mt-16 sm:-mt-20 ml-2 sm:-ml-8 relative z-10 shadow-2xl">
+          <p class="font-ambroise uppercase text-[18px] sm:text-[21px] leading-[1.4] tracking-[0.04em] mb-4 text-white font-light">
+            “I'VE ALWAYS LOVED THE IDEA OF NOT BEING WHAT PEOPLE EXPECT ME TO BE.”
+          </p>
+          <p class="font-calluna text-[12px] tracking-[0.03em] text-white/90">
+            - Dita Von Teese
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: My daily pleasures -->
+    <div class="md:col-span-5 lg:col-span-4 pt-10 md:pt-4 text-left">
+      <p class="font-calluna italic text-[15px] mb-3 text-black">My daily pleasures</p>
+      <div class="font-calluna font-bold text-[15px] leading-[2.3] tracking-[0.03em] text-black uppercase">
+        <p>RELAXING SAUNAS</p>
+        <p>LATE-NIGHT MARTINIS</p>
+        <p>PARISIAN CANDLES</p>
+        <p>BLACK &amp; WHITE EVERYTHING</p>
+        <p>DARK DARK CHOCOLATE</p>
+        <p>WANDERLUST</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lower Section: Clients & Publications -->
+  <div class="mt-20 pt-10 border-t border-[#e5e5e5] max-w-[1050px]">
+    <p class="font-calluna font-bold text-[15px] leading-[2.3] tracking-[0.03em] text-black mb-4">
+      CLIENTS &amp; PUBLICATIONS
+    </p>
+
+    <p class="font-calluna italic text-[15px] leading-[2.3] tracking-[0.03em] text-black mb-8">
+      Publications Include : Vogue Italia, D Magazine, St. Louis Magazine, ELLE Canada, Modern Luxury Dallas, In Touch Weekly, Vici Collection, Tribeza, Lucy’s Magazine, Glassbook Magazine, Texas Lifestyle Magazine, Papercut Magazine, Professional Photographer Magazine (<a href="https://www.ppa.com/ppmag/articles/jai-mayhews-magazine-worthy-portraits-for-non-model-clients?fbclid=IwAR3ANvX1TYBlTFScxoeS4wxmTbRaK3IMGaSWA6nro9fiu9EB1RkN7Tq7tsA" target="_blank" rel="noopener" class="underline underline-offset-4 hover:text-[#ff9061] transition-colors">feature &amp; interview</a>), Good Housekeeping, Moevir Paris, VIGOUR Magazine, Selin Magazine, Clayton City Lifestyle, Pump Magazine, FaceON Magazine, Shutter Magazine, Dark Beauty Magazine, Elléments Magazine, Elegant Magazine, Artells Magazine, Scorpio Jin Magazine, Flanelle Magazine, Trend Prive Magazine, Enzomnia Magazine, Coco Magazine, Shaub Magazine, Matte Mag, Sessions Magazine, SALYSÉ, Nouveau Magazine. COCO Mag, Solstice Magazine, Period Mag, ACHE Magazine, Vatra Magazine, Vesper, LYUN Magazine, Gazelle Magazine, Surreal Beauty Magazine, Signature Hits Magazine, Boyfriend Magazine, and others…
+    </p>
+
+    <p class="font-calluna italic text-[15px] leading-[2.3] tracking-[0.03em] text-black mb-10">
+      Clients Include : Michelle Buck (ESPN), Joe Buck (ESPN), Catherine Lowe &amp; Sean Lowe (The Bachelor 17), Emily Frisella (CEO &amp; Author), Emily Herren Travis (Champagne &amp; Chanel), Racquel Frisella (RFA Skincare), Sal Frisella (1st Phorm CEO), Dr. Gabrielle Lyon (Author &amp; Speaker), Kelly Stupe (The Car Mom), Courtney Kerr (Kerrently), Stephanie Hollman (Real Housewives of Dallas), R'Bonney Gabriel (Miss Universe 2022), Chris Pronger (NHL Hall of Fame), Paul Goldschmidt (7-time MLB All-Star), Vici Collection, Alexis Waters (The Bachelor), Nancy Rogers (NCR Capital Group &amp; Philanthropist), Katie Collier (Katie’s Pizza &amp; Pasta Osteria), Amy Stuttle (Victory Men’s Health), August Ponthier (Singer/Songwriter), Meghan King (Real Housewives of Orange County), Scott Rosenblum (Celebrity Lawyer), Avani Nayak (Avani Derm Spa), Ted Collier (Artist), Jeremy Maclin (NFL Wide Receiver), Brittany Ricketts (House of Preservation), Caitlin Zalatoris, Yana Tarasenko, Lisa Hart (Emmy award winner), Craig McGinlay (Hollywood actor), Taylor Leigh Kessler (Miss Texas USA 2020), RFA Skincare, The Car Pool with Kelly and Lizz, Well Inspired Travels, Mysterious by NPN (designer) and others...
+    </p>
+
+    <!-- Speaker Bullet List -->
+    <ul class="list-disc pl-5 space-y-3 font-calluna text-[15px] leading-relaxed text-black mb-16">
+      <li>The Portrait Edit 2026 - <span class="italic">Featured Speaker</span></li>
+      <li>WPPI + Portrait Masters Conference 2024 - <span class="italic">Featured Speaker</span></li>
+      <li>PRO EDU Instructor - <span class="italic">“Luxe Portraiture &amp; Retouching” Tutorial</span></li>
+      <li><span class="italic">PPA : Dallas 2022 - Featured Speaker</span></li>
+      <li>The Portrait Masters 2020 - <span class="italic">Featured Speaker</span></li>
+      <li>Capturing WOW Global Summit 2020 - <span class="italic">Maternity Speaker</span></li>
+    </ul>
+
+    <!-- Sign-off: Much love, JADE -->
+    <div class="pt-4 pb-8">
+      <h3 class="font-calluna italic text-[15px] tracking-[0.03em] uppercase text-[#333333] mb-2">Much love,</h3>
+      <h1 class="font-ambroise italic text-[46px] sm:text-[57px] text-[#222222] tracking-[2.28px]">JADE</h1>
+    </div>
+
+  </div>
+  <?php
+          endif;
+      endwhile;
+  endif;
+  ?>
+</main>
+
+<!-- ================= STAGE 1 SIGNATURE FOOTER (EXACT JADE HA) ================= -->
+<div class="max-w-4xl mx-auto px-6 py-16 border-t border-[#e5e5e5] grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center text-[#222222]">
+  <div>
+    <p class="font-calluna italic text-sm font-semibold mb-1">Contact</p>
+    <a href="mailto:<?php echo esc_attr(get_theme_mod('jadeha_email', 'jadehastudio@gmail.com')); ?>" class="font-calluna text-xs hover:text-[#ff9061] transition-colors"><?php echo esc_html(get_theme_mod('jadeha_email', 'jadehastudio@gmail.com')); ?></a>
+  </div>
+  <div>
+    <p class="font-ambroise text-lg tracking-[0.2em] mb-3">— JADE HA —</p>
+    <div class="flex items-center justify-center space-x-4">
+      <a href="<?php echo esc_url(get_theme_mod('jadeha_instagram', 'https://www.instagram.com/jadeha_studio_sg/')); ?>" target="_blank" rel="noopener" aria-label="Instagram" class="text-[#222222] hover:text-[#ff9061] transition-colors">
+        <svg viewBox="17 17 30 30" class="w-[18px] h-[18px] fill-current">
+          <path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"></path>
+        </svg>
+      </a>
+      <a href="<?php echo esc_url(get_theme_mod('jadeha_facebook', 'https://www.facebook.com/jadehastudio/')); ?>" target="_blank" rel="noopener" aria-label="Facebook" class="text-[#222222] hover:text-[#ff9061] transition-colors">
+        <svg viewBox="0 0 24 24" class="w-[18px] h-[18px] fill-current">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div>
+    <p class="font-calluna italic text-sm font-semibold mb-1">Hours</p>
+    <p class="font-calluna italic text-xs text-zinc-600">by appointment only</p>
+  </div>
+</div>
+
+<!-- ================= STAGE 2 BOTTOM DARK GATEWAY (#2b2421) ================= -->
+<div class="py-16 px-4 text-center select-none" style="background-color: #2b2421;">
+  <p class="font-calluna italic text-base sm:text-lg text-white/90 mb-6 lowercase">
+    luxury portrait &amp; fashion studio
+  </p>
+  <nav class="flex items-center justify-center space-x-8 sm:space-x-14 mb-8">
+    <a href="<?php echo esc_url(home_url('/luxury-photoshoot/')); ?>" class="ambroise-giant-link" style="font-size: clamp(28px, 4.5vw, 56px);">
+      SHOOTS
+    </a>
+    <a href="<?php echo esc_url(home_url('/lovejade/')); ?>" class="ambroise-giant-link active" style="font-size: clamp(28px, 4.5vw, 56px);">
+      JADE
+    </a>
+    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="ambroise-giant-link" style="font-size: clamp(28px, 4.5vw, 56px);">
+      CONTACT
+    </a>
+  </nav>
+  <div class="text-[10px] tracking-widest text-white/40 uppercase">
+    <?php echo esc_html(get_theme_mod('jadeha_copyright', 'Jade Ha Studio - Photography')); ?>
+  </div>
+</div>
+
+<?php
+get_footer();
