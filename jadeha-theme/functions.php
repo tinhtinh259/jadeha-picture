@@ -117,6 +117,19 @@ function jadeha_body_classes($classes) {
 add_filter('body_class', 'jadeha_body_classes');
 
 /**
+ * Automatically resolve relative asset paths in post content
+ * Allows imported content and editor images to load reliably
+ */
+function jadeha_filter_content_assets($content) {
+    if (empty($content)) {
+        return $content;
+    }
+    $theme_uri = get_template_directory_uri();
+    return preg_replace('/src=["\']assets\/images\//', 'src="' . esc_url($theme_uri) . '/assets/images/', $content);
+}
+add_filter('the_content', 'jadeha_filter_content_assets');
+
+/**
  * Register Custom Post Types for Portfolio & Transformations
  * Helps the studio owner manage photos easily in wp-admin
  */
@@ -363,6 +376,43 @@ function jadeha_customize_register($wp_customize) {
     $wp_customize->add_control('jadeha_facebook', array('label' => __('Facebook URL', 'jadeha-theme'), 'section' => 'jadeha_social_section', 'type' => 'url'));
 }
 add_action('customize_register', 'jadeha_customize_register');
+
+/**
+ * Custom Nav Walker for Exact 1:1 Jade Ha Header Dropdown Menu
+ */
+class Jadeha_Nav_Walker extends Walker_Nav_Menu {
+    public function start_lvl(&$output, $depth = 0, $args = null) {
+        $output .= '<div class="subnav">';
+    }
+
+    public function end_lvl(&$output, $depth = 0, $args = null) {
+        $output .= '</div>';
+    }
+
+    public function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0) {
+        $item = $data_object;
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $has_children = in_array('menu-item-has-children', $classes);
+
+        if ($depth === 0) {
+            $folder_class = $has_children ? ' folder' : '';
+            $output .= '<div class="nav-item' . $folder_class . '">';
+            if ($has_children) {
+                $output .= '<span class="folder-toggle">' . esc_html($item->title) . '</span>';
+            } else {
+                $output .= '<a href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
+            }
+        } else {
+            $output .= '<a href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
+        }
+    }
+
+    public function end_el(&$output, $data_object, $depth = 0, $args = null) {
+        if ($depth === 0) {
+            $output .= '</div>';
+        }
+    }
+}
 
 /**
  * Include Studio Media Gallery Manager

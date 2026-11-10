@@ -65,6 +65,7 @@
                     'items_wrap'     => '%3$s',
                     'fallback_cb'    => false,
                     'depth'          => 2,
+                    'walker'         => new Jadeha_Nav_Walker(),
                 ));
             } else {
                 ?>

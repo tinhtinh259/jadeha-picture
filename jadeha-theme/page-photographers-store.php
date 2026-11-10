@@ -62,10 +62,6 @@ get_header();
   ?>
 </main>
 
-<footer class="py-12 border-t border-white/5 text-center text-xs tracking-widest text-zinc-500 uppercase">
-  <p><?php echo esc_html(get_theme_mod('jadeha_copyright', 'Jade Ha Studio - Photography')); ?></p>
-</footer>
-
 <?php
 get_footer();
 
