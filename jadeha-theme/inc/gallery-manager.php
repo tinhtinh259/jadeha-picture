@@ -23,19 +23,38 @@ function jadeha_admin_gallery_scripts($hook) {
 add_action('admin_enqueue_scripts', 'jadeha_admin_gallery_scripts');
 
 /**
- * Register Gallery Meta Box for Pages
+ * Register Gallery Meta Box for Pages (Only on Gallery & Slider templates)
  */
-function jadeha_register_gallery_metabox() {
-    add_meta_box(
-        'jadeha_page_gallery',
-        __('📸 Bộ Sưu Tập Ảnh Studio (Media Gallery)', 'jadeha-theme'),
-        'jadeha_render_gallery_metabox',
-        'page',
-        'normal',
-        'high'
+function jadeha_register_gallery_metabox($post_type, $post = null) {
+    if ($post_type !== 'page' || !$post) {
+        return;
+    }
+
+    $template = get_post_meta($post->ID, '_wp_page_template', true);
+    $gallery_templates = array(
+        'page-transformations.php',
+        'page-gallery.php',
+        'page-fashion.php',
+        'page-couples.php',
+        'page-portraits.php',
+        'page-branding.php',
+        'page-maternity.php',
+        'page-boudoir.php',
     );
+    $gallery_slugs = array('transformations', 'fashion', 'couples', 'portraits', 'branding', 'maternity', 'boudoir');
+
+    if (in_array($template, $gallery_templates) || in_array($post->post_name, $gallery_slugs)) {
+        add_meta_box(
+            'jadeha_page_gallery',
+            __('📸 Bộ Sưu Tập Ảnh Studio (Media Gallery)', 'jadeha-theme'),
+            'jadeha_render_gallery_metabox',
+            'page',
+            'normal',
+            'high'
+        );
+    }
 }
-add_action('add_meta_boxes', 'jadeha_register_gallery_metabox');
+add_action('add_meta_boxes', 'jadeha_register_gallery_metabox', 10, 2);
 
 /**
  * Render Gallery Meta Box HTML

@@ -130,7 +130,7 @@ function jadeha_filter_content_assets($content) {
         return $content;
     }
     $theme_uri = get_template_directory_uri();
-    return preg_replace('/src=["\']assets\/images\//', 'src="' . esc_url($theme_uri) . '/assets/images/', $content);
+    return preg_replace('/src=["\']\/?assets\/images\//', 'src="' . esc_url($theme_uri) . '/assets/images/', $content);
 }
 add_filter('the_content', 'jadeha_filter_content_assets');
 
