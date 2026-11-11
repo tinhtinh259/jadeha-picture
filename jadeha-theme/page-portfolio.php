@@ -193,14 +193,42 @@
     </nav>
   </div>
 
+  <?php
+  $portfolio_tagline = get_theme_mod('jadeha_portfolio_tagline', 'st. louis luxury photo studio');
+  $categories_config = array(
+      'fashion'   => array('default_title' => 'FASHION',   'default_url' => home_url('/fashion/'),   'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/fashion.jpg',   'align' => 'text-right'),
+      'couples'   => array('default_title' => 'COUPLES',   'default_url' => home_url('/couples/'),   'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/couples.jpg',   'align' => 'text-left'),
+      'portraits' => array('default_title' => 'PORTRAITS', 'default_url' => home_url('/portraits/'), 'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/portraits.jpg', 'align' => 'text-right'),
+      'branding'  => array('default_title' => 'BRANDING',  'default_url' => home_url('/branding/'),  'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/branding.jpg',  'align' => 'text-left'),
+      'maternity' => array('default_title' => 'MATERNITY', 'default_url' => home_url('/maternity/'), 'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/maternity.jpg', 'align' => 'text-right'),
+      'boudoir'   => array('default_title' => 'BOUDOIR',   'default_url' => home_url('/boudoir/'),   'default_bg' => get_template_directory_uri() . '/assets/images/portfolio/boudoir.jpg',   'align' => 'text-left'),
+  );
+
+  $items = array();
+  foreach ($categories_config as $key => $cfg) {
+      $text = get_theme_mod("jadeha_portfolio_{$key}_text", $cfg['default_title']);
+      if (empty($text)) $text = $cfg['default_title'];
+
+      $url = get_theme_mod("jadeha_portfolio_{$key}_url", '');
+      if (empty($url)) $url = $cfg['default_url'];
+
+      $bg = get_theme_mod("jadeha_portfolio_{$key}_bg", '');
+      if (empty($bg)) $bg = $cfg['default_bg'];
+
+      $items[$key] = array(
+          'text'  => $text,
+          'url'   => $url,
+          'bg'    => $bg,
+          'align' => $cfg['align'],
+      );
+  }
+  ?>
+
   <!-- ================= INTERACTIVE BACKGROUND IMAGES (DEFAULT SOLID #2b2421) ================= -->
   <div class="portfolio-bg-container">
-    <div id="bg-fashion" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/fashion.jpg'); ?>');"></div>
-    <div id="bg-couples" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/couples.jpg'); ?>');"></div>
-    <div id="bg-portraits" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/portraits.jpg'); ?>');"></div>
-    <div id="bg-branding" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/branding.jpg'); ?>');"></div>
-    <div id="bg-maternity" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/maternity.jpg'); ?>');"></div>
-    <div id="bg-boudoir" class="bg-crossfade" style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/portfolio/boudoir.jpg'); ?>');"></div>
+    <?php foreach ($items as $key => $item): ?>
+    <div id="bg-<?php echo esc_attr($key); ?>" class="bg-crossfade" style="background-image: url('<?php echo esc_url($item['bg']); ?>');"></div>
+    <?php endforeach; ?>
     <div class="portfolio-overlay"></div>
   </div>
 
@@ -209,43 +237,18 @@
 
     <!-- Subtitle (Exact from Jade Ha Portfolio: Calluna 15px normal) -->
     <p class="collection-desc mb-6 sm:mb-8 text-white/90">
-      <?php echo esc_html(get_theme_mod('jadeha_tagline', 'st. louis luxury photo studio')); ?>
+      <?php echo esc_html($portfolio_tagline); ?>
     </p>
 
     <!-- The 6 Large Category Links: Exact Jade Ha (2 Columns: Left Right-Aligned, Right Left-Aligned) -->
     <nav id="portfolio-nav" class="grid grid-cols-2 gap-x-12 sm:gap-x-16 md:gap-x-20 gap-y-2 sm:gap-y-3 md:gap-y-4 max-w-[860px] mx-auto items-center">
-      <div class="text-right">
-        <a href="<?php echo esc_url(home_url('/fashion/')); ?>" class="portfolio-giant-link" data-bg="bg-fashion">
-          FASHION
+      <?php foreach ($items as $key => $item): ?>
+      <div class="<?php echo esc_attr($item['align']); ?>">
+        <a href="<?php echo esc_url($item['url']); ?>" class="portfolio-giant-link" data-bg="bg-<?php echo esc_attr($key); ?>">
+          <?php echo esc_html($item['text']); ?>
         </a>
       </div>
-      <div class="text-left">
-        <a href="<?php echo esc_url(home_url('/couples/')); ?>" class="portfolio-giant-link" data-bg="bg-couples">
-          COUPLES
-        </a>
-      </div>
-
-      <div class="text-right">
-        <a href="<?php echo esc_url(home_url('/portraits/')); ?>" class="portfolio-giant-link" data-bg="bg-portraits">
-          PORTRAITS
-        </a>
-      </div>
-      <div class="text-left">
-        <a href="<?php echo esc_url(home_url('/branding/')); ?>" class="portfolio-giant-link" data-bg="bg-branding">
-          BRANDING
-        </a>
-      </div>
-
-      <div class="text-right">
-        <a href="<?php echo esc_url(home_url('/maternity/')); ?>" class="portfolio-giant-link" data-bg="bg-maternity">
-          MATERNITY
-        </a>
-      </div>
-      <div class="text-left">
-        <a href="<?php echo esc_url(home_url('/boudoir/')); ?>" class="portfolio-giant-link" data-bg="bg-boudoir">
-          BOUDOIR
-        </a>
-      </div>
+      <?php endforeach; ?>
     </nav>
 
   </div>

@@ -352,6 +352,69 @@ function jadeha_customize_register($wp_customize) {
     $wp_customize->add_setting('jadeha_home_btn3_url', array('default' => '', 'sanitize_callback' => 'esc_url_raw'));
     $wp_customize->add_control('jadeha_home_btn3_url', array('label' => __('Link nút 3 (Để trống = /contact/)', 'jadeha-theme'), 'section' => 'jadeha_hero_section', 'type' => 'url'));
 
+    // ==========================================
+    // Portfolio Landing Page (Hover Crossfade Backgrounds)
+    // ==========================================
+    $wp_customize->add_section('jadeha_portfolio_section', array(
+        'title'       => __('Trang Portfolio (Text, Link & Ảnh Hover)', 'jadeha-theme'),
+        'description' => __('Tùy chỉnh 6 mục portfolio và ảnh nền tương ứng khi rê chuột (hover).', 'jadeha-theme'),
+        'priority'    => 32,
+    ));
+
+    $wp_customize->add_setting('jadeha_portfolio_tagline', array(
+        'default'           => 'st. louis luxury photo studio',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('jadeha_portfolio_tagline', array(
+        'label'   => __('Dòng chữ phụ trên danh mục', 'jadeha-theme'),
+        'section' => 'jadeha_portfolio_section',
+    ));
+
+    $default_portfolio_categories = array(
+        'fashion'   => array('label' => 'Mục 1: FASHION',   'text' => 'FASHION',   'url' => '/fashion/'),
+        'couples'   => array('label' => 'Mục 2: COUPLES',   'text' => 'COUPLES',   'url' => '/couples/'),
+        'portraits' => array('label' => 'Mục 3: PORTRAITS', 'text' => 'PORTRAITS', 'url' => '/portraits/'),
+        'branding'  => array('label' => 'Mục 4: BRANDING',  'text' => 'BRANDING',  'url' => '/branding/'),
+        'maternity' => array('label' => 'Mục 5: MATERNITY', 'text' => 'MATERNITY', 'url' => '/maternity/'),
+        'boudoir'   => array('label' => 'Mục 6: BOUDOIR',   'text' => 'BOUDOIR',   'url' => '/boudoir/'),
+    );
+
+    foreach ($default_portfolio_categories as $key => $info) {
+        // Text
+        $wp_customize->add_setting("jadeha_portfolio_{$key}_text", array(
+            'default'           => $info['text'],
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control("jadeha_portfolio_{$key}_text", array(
+            'label'   => __($info['label'] . ' - Chữ hiển thị', 'jadeha-theme'),
+            'section' => 'jadeha_portfolio_section',
+        ));
+
+        // URL
+        $wp_customize->add_setting("jadeha_portfolio_{$key}_url", array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        $wp_customize->add_control("jadeha_portfolio_{$key}_url", array(
+            'label'       => __($info['label'] . ' - Đường link', 'jadeha-theme'),
+            'description' => __('Để trống sẽ trỏ về: ' . $info['url'], 'jadeha-theme'),
+            'section'     => 'jadeha_portfolio_section',
+            'type'        => 'url',
+        ));
+
+        // Background Image
+        $wp_customize->add_setting("jadeha_portfolio_{$key}_bg", array(
+            'default'           => '',
+            'transport'         => 'refresh',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "jadeha_portfolio_{$key}_bg", array(
+            'label'       => __($info['label'] . ' - Ảnh nền khi Hover', 'jadeha-theme'),
+            'description' => __('Chọn hoặc tải ảnh từ Thư viện Media (nếu để trống sẽ dùng ảnh mặc định của theme).', 'jadeha-theme'),
+            'section'     => 'jadeha_portfolio_section',
+        )));
+    }
+
     // Studio Contact Info
     $wp_customize->add_section('jadeha_contact_section', array(
         'title'    => __('Thông Tin Studio & Hotline', 'jadeha-theme'),
