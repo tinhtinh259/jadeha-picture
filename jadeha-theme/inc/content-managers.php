@@ -25,8 +25,17 @@ add_action('admin_enqueue_scripts', 'jadeha_editorial_admin_scripts');
 /**
  * Register Meta Boxes for Testimonials & Meet The Team
  */
-function jadeha_register_editorial_metaboxes($post_type, $post = null) {
-    if ($post_type !== 'page' || !$post) {
+function jadeha_register_editorial_metaboxes($post = null) {
+    if (!$post instanceof WP_Post) {
+        global $post;
+    }
+    if (!$post instanceof WP_Post) {
+        $post_id = isset($_GET['post']) ? absint($_GET['post']) : (isset($_POST['post_ID']) ? absint($_POST['post_ID']) : 0);
+        if ($post_id) {
+            $post = get_post($post_id);
+        }
+    }
+    if (!$post instanceof WP_Post) {
         return;
     }
 
@@ -57,7 +66,8 @@ function jadeha_register_editorial_metaboxes($post_type, $post = null) {
         );
     }
 }
-add_action('add_meta_boxes', 'jadeha_register_editorial_metaboxes', 10, 2);
+add_action('add_meta_boxes', 'jadeha_register_editorial_metaboxes');
+add_action('add_meta_boxes_page', 'jadeha_register_editorial_metaboxes');
 
 /**
  * Render Testimonials Meta Box
