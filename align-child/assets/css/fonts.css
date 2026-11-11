@@ -1,0 +1,652 @@
+﻿/* ==========================================================================
+   EXACT JADE HA WEBFONTS (Extracted directly from use.typekit.net)
+   - ambroise-std (Didone luxury display serif for titles & center links)
+   - calluna (Elegant editorial text serif for nav, subtitle & body)
+   ========================================================================== */
+
+/* --- ambroise-std --- */
+@font-face {
+  font-family: 'ambroise-std';
+  src: url('../fonts/typekit/665547_n3_l.woff2') format('woff2'),
+       url('../fonts/typekit/665547_n3_d.woff') format('woff'),
+       url('../fonts/typekit/665547_n3_a.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ambroise-std';
+  src: url('../fonts/typekit/4c37ea_n4_l.woff2') format('woff2'),
+       url('../fonts/typekit/4c37ea_n4_d.woff') format('woff'),
+       url('../fonts/typekit/4c37ea_n4_a.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ambroise-std';
+  src: url('../fonts/typekit/b1994b_n7_l.woff2') format('woff2'),
+       url('../fonts/typekit/b1994b_n7_d.woff') format('woff'),
+       url('../fonts/typekit/b1994b_n7_a.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ambroise-std';
+  src: url('../fonts/typekit/9c6e04_i3_l.woff2') format('woff2'),
+       url('../fonts/typekit/9c6e04_i3_d.woff') format('woff'),
+       url('../fonts/typekit/9c6e04_i3_a.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ambroise-std';
+  src: url('../fonts/typekit/409d99_i7_l.woff2') format('woff2'),
+       url('../fonts/typekit/409d99_i7_d.woff') format('woff'),
+       url('../fonts/typekit/409d99_i7_a.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+/* --- calluna --- */
+@font-face {
+  font-family: 'calluna';
+  src: url('../fonts/typekit/428704_n4_l.woff2') format('woff2'),
+       url('../fonts/typekit/428704_n4_d.woff') format('woff'),
+       url('../fonts/typekit/428704_n4_a.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'calluna';
+  src: url('../fonts/typekit/293f37_n6_l.woff2') format('woff2'),
+       url('../fonts/typekit/293f37_n6_d.woff') format('woff'),
+       url('../fonts/typekit/293f37_n6_a.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'calluna';
+  src: url('../fonts/typekit/4d2e44_n7_l.woff2') format('woff2'),
+       url('../fonts/typekit/4d2e44_n7_d.woff') format('woff'),
+       url('../fonts/typekit/4d2e44_n7_a.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'calluna';
+  src: url('../fonts/typekit/401f20_i4_l.woff2') format('woff2'),
+       url('../fonts/typekit/401f20_i4_d.woff') format('woff'),
+       url('../fonts/typekit/401f20_i4_a.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'calluna';
+  src: url('../fonts/typekit/ef2a7e_i7_l.woff2') format('woff2'),
+       url('../fonts/typekit/ef2a7e_i7_d.woff') format('woff'),
+       url('../fonts/typekit/ef2a7e_i7_a.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   EXACT TYPOGRAPHY RULES (Computed from jadehastudio.com)
+   ========================================================================== */
+
+/* Global Body Font */
+body {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.68;
+  letter-spacing: 0.45px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header Navigation Links: 14px, Calluna 600, letter-spacing 0.42px */
+.site-nav-link {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.42px;
+  line-height: 14px;
+  text-transform: none;
+  color: #ffffff;
+  transition: opacity 0.25s ease;
+}
+.site-nav-link:hover {
+  opacity: 0.65;
+}
+
+/* Subtitle / Collection Desc: Calluna 400 Italic, lowercase (Exact Jade Ha WhatFont: 18px 400 italic, line-height 24px, letter-spacing 0.55px) */
+.collection-desc {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.55px;
+  line-height: 24px;
+  text-transform: lowercase;
+  color: #ffffff;
+}
+
+/* Center Giant Links (Home SHOOTS | JADE | CONTACT): Fluid responsive up to 86px (Jade Ha spec) */
+.ambroise-giant-link {
+  font-family: 'ambroise-std', serif;
+  font-size: clamp(32px, 5.2vw, 86px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  transition: opacity 0.3s ease;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+@media (min-width: 1440px) {
+  .ambroise-giant-link {
+    font-size: 86px;
+    line-height: 112px;
+    letter-spacing: 4.32px;
+    padding: 4px 16px;
+  }
+}
+
+.ambroise-giant-link::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+.ambroise-giant-link:hover::after,
+.ambroise-giant-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Portfolio 6 Giant Category Links (Exact Jade Ha Portfolio: 2 Columns, Ambroise Std 300) */
+.portfolio-giant-link {
+  font-family: 'ambroise-std', serif;
+  font-size: clamp(28px, 3.8vw, 64px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding: 2px 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .portfolio-giant-link {
+    font-size: clamp(38px, 4.5vw, 64px);
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-giant-link {
+    font-size: 64px;
+    line-height: 1.25;
+    letter-spacing: 3.2px;
+  }
+}
+
+.portfolio-giant-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.portfolio-giant-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Page Titles (H1): 50px, Ambroise Std 300 */
+.page-heading-h1 {
+  font-family: 'ambroise-std', serif;
+  font-size: clamp(34px, 4.5vw, 50.67px);
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Section Headings (H2): 37px, Ambroise Std 300 */
+.section-heading-h2 {
+  font-family: 'ambroise-std', serif;
+  font-size: clamp(26px, 3.2vw, 37.33px);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Subheadings (H3): 15px, Calluna 400 uppercase */
+.sub-heading-h3 {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Editorial Body Paragraphs: 13-14px, Calluna 400 */
+.editorial-p {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: 0.45px;
+  color: #e2e2e2;
+}
+
+/* ==========================================================================
+   EXACT JADE HA HEADER & NAVIGATION STYLES
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 38px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: transparent;
+  transition: transform 0.45s ease, opacity 0.3s ease;
+}
+
+.site-header.hide-header {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+}
+
+.site-branding h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.site-branding a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-branding img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-social-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-item {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+
+.nav-item a, 
+.nav-item span,
+.site-nav-link {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.42px;
+  line-height: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Hover & Active States: #ff9061 */
+.nav-item a:hover, 
+.nav-item span:hover,
+.nav-item.folder:hover > a,
+.nav-item.folder:hover > span,
+.site-nav-link:hover,
+.nav-item.active > a,
+.nav-item.active > span,
+.nav-item > a.active,
+.site-nav-link.active,
+.nav-item > a:active,
+.site-nav-link:active,
+.current-menu-item > a,
+.current_page_item > a,
+.current-menu-ancestor > a,
+.current_page_ancestor > a,
+.current-menu-parent > a {
+  color: #ff9061 !important;
+  opacity: 1;
+}
+
+.nav-item.folder:hover .subnav,
+.nav-item.folder:focus-within .subnav,
+.subnav:hover {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  transform: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 4px 0 0 0;
+  width: 185px;
+  max-width: 190px;
+  text-align: right;
+  z-index: 9999;
+  margin-top: 0;
+  pointer-events: auto;
+}
+
+/* Invisible hit bridge between nav item and dropdown so hover is never lost */
+.subnav::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -10px;
+  height: 25px;
+  background: transparent;
+  display: block;
+  z-index: 10;
+}
+
+.subnav a {
+  display: block;
+  padding: 4px 0;
+  color: #ffffff;
+  font-family: 'calluna', Georgia, serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+  line-height: 1.35;
+  text-transform: none;
+  text-align: right;
+  white-space: normal;
+  word-break: normal;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.subnav a:hover,
+.subnav a.active,
+.subnav a:active,
+.subnav .current-menu-item > a,
+.subnav .current_page_item > a {
+  color: #ff9061 !important;
+  opacity: 1;
+}
+
+.header-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 28px;
+}
+
+.header-social-icons a {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.header-social-icons a:hover,
+.header-social-icons a.active,
+.header-social-icons a:active {
+  color: #ff9061 !important;
+  opacity: 1;
+}
+
+.social-svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+  display: block;
+  transition: color 0.25s ease, fill 0.25s ease;
+}
+
+.header-social-icons a:hover .social-svg,
+.header-social-icons a.active .social-svg,
+.header-social-icons a:active .social-svg,
+.header-social-icons a:hover svg path,
+.header-social-icons a.active svg path {
+  color: #ff9061 !important;
+  fill: #ff9061 !important;
+}
+
+#mobile-toggle:hover {
+  color: #ff9061;
+}
+
+#mobile-menu a:hover,
+#mobile-menu a.active,
+#mobile-menu a:active {
+  color: #ff9061 !important;
+}
+
+/* ==========================================================================
+   LIGHT HEADER THEME (For white/light background pages like luxury-photoshoot)
+   ========================================================================== */
+body.header-theme-light .site-header .nav-item a,
+body.header-theme-light .site-header .nav-item span,
+body.header-theme-light .site-header .site-nav-link {
+  color: #222222;
+}
+
+body.header-theme-light .site-header .site-branding img {
+  filter: none;
+  mix-blend-mode: multiply;
+  width: auto;
+  height: 26px;
+}
+
+body:not(.header-theme-light) .site-header .site-branding img {
+  filter: invert(1);
+  mix-blend-mode: screen;
+  width: auto;
+  height: 26px;
+}
+
+body.header-theme-light .site-header .header-social-icons a {
+  color: #222222;
+}
+
+body.header-theme-light .site-header #mobile-toggle {
+  color: #222222;
+}
+
+body.header-theme-light .site-header .nav-item a:hover,
+body.header-theme-light .site-header .nav-item span:hover,
+body.header-theme-light .site-header .nav-item.folder:hover > a,
+body.header-theme-light .site-header .nav-item.folder:hover > span,
+body.header-theme-light .site-header .site-nav-link:hover,
+body.header-theme-light .site-header .nav-item.active > a,
+body.header-theme-light .site-header .nav-item.active > span,
+body.header-theme-light .site-header .nav-item > a.active,
+body.header-theme-light .site-header .site-nav-link.active,
+body.header-theme-light .site-header .header-social-icons a:hover,
+body.header-theme-light .site-header .header-social-icons a.active {
+  color: #ff9061 !important;
+}
+
+body.header-theme-light .site-header .header-social-icons a:hover .social-svg,
+body.header-theme-light .site-header .header-social-icons a.active .social-svg {
+  color: #ff9061 !important;
+  fill: #ff9061 !important;
+}
+
+body.header-theme-light .subnav {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.header-theme-light .subnav a {
+  color: #222222 !important;
+  text-shadow: none !important;
+}
+
+body.header-theme-light .subnav a:hover,
+body.header-theme-light .subnav a.active {
+  color: #ff9061 !important;
+}
+
+/* ================= MOBILE HEADER & OVERLAY MENU (EXACT JADE HA) ================= */
+.header-social-link,
+.header-toggle-btn {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.header-social-link:hover,
+.header-toggle-btn:hover {
+  color: #ff9061;
+}
+
+body.header-theme-light .header-social-link,
+body.header-theme-light .header-toggle-btn {
+  color: #222222;
+}
+
+body.header-theme-light .header-social-link:hover,
+body.header-theme-light .header-toggle-btn:hover {
+  color: #ff9061;
+}
+
+/* Mobile Menu Fullscreen Overlay */
+#mobile-menu {
+  background: rgba(18, 16, 15, 0.98);
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body.header-theme-light #mobile-menu {
+  background: rgba(255, 255, 255, 0.98);
+  color: #222222;
+}
+
+.mobile-nav-link,
+.mobile-folder-toggle {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: inherit;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mobile-nav-link:hover,
+.mobile-folder-toggle:hover,
+.mobile-nav-link.active,
+.mobile-folder-toggle.active {
+  color: #ff9061 !important;
+}
+
+.mobile-subnav a {
+  font-family: 'calluna', Georgia, serif;
+  font-size: 15px;
+  color: #888888;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  display: block;
+}
+
+body.header-theme-light .mobile-subnav a {
+  color: #666666;
+}
+
+.mobile-subnav a:hover,
+.mobile-subnav a.active {
+  color: #ff9061 !important;
+}
+
+

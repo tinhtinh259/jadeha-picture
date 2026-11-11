@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Jade Ha Header"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Jade Ha Footer"
+    }
+  ],
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "100%",
+      "wideSize": "100%"
+    },
+    "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "spacing": {
+      "padding": {
+        "left": "0px",
+        "right": "0px"
+      }
+    }
+  }
+}
