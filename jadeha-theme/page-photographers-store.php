@@ -34,7 +34,7 @@ get_header();
       </div>
       <h3 class="font-calluna text-lg text-white uppercase tracking-wider mb-2">Luxury Pricing Guide Template</h3>
       <p class="text-zinc-400 text-xs mb-4">$149.00</p>
-      <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="inline-block px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">Order Template</a>
+      <button class="px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">View Details</button>
     </div>
 
     <div class="bg-zinc-950 p-6 border border-white/10 text-center">
@@ -43,7 +43,7 @@ get_header();
       </div>
       <h3 class="font-calluna text-lg text-white uppercase tracking-wider mb-2">Editorial Collection LR Presets</h3>
       <p class="text-zinc-400 text-xs mb-4">$89.00</p>
-      <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="inline-block px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">Order Presets</a>
+      <button class="px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">View Details</button>
     </div>
 
     <div class="bg-zinc-950 p-6 border border-white/10 text-center">
@@ -52,7 +52,7 @@ get_header();
       </div>
       <h3 class="font-calluna text-lg text-white uppercase tracking-wider mb-2">Client Welcome Packet Template</h3>
       <p class="text-zinc-400 text-xs mb-4">$129.00</p>
-      <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="inline-block px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">Order Packet</a>
+      <button class="px-6 py-2 border border-white text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">View Details</button>
     </div>
   </div>
   <?php
@@ -64,4 +64,3 @@ get_header();
 
 <?php
 get_footer();
-

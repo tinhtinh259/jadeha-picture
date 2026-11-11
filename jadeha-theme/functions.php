@@ -107,6 +107,11 @@ add_action('wp_enqueue_scripts', 'jadeha_theme_scripts');
 function jadeha_body_classes($classes) {
     if (is_front_page() || is_page('portfolio') || is_page_template('page-portfolio.php')) {
         $classes[] = 'header-theme-transparent';
+    } elseif (is_page(array('mentoring', 'photographers-store', 'workshop')) || 
+              is_page_template(array('page-mentoring.php', 'page-photographers-store.php', 'page-workshop.php'))) {
+        $classes[] = 'header-theme-transparent';
+        $classes[] = 'bg-black';
+        $classes[] = 'text-white';
     } else {
         $classes[] = 'header-theme-light';
         $classes[] = 'bg-white';
