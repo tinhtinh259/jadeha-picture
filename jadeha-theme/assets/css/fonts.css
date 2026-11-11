@@ -7,9 +7,9 @@
 /* --- ambroise-std --- */
 @font-face {
   font-family: 'ambroise-std';
-  src: url('https://use.typekit.net/af/665547/0000000000000000773598fb/31/l?subset_id=2&fvd=n3&v=3') format('woff2'),
-       url('https://use.typekit.net/af/665547/0000000000000000773598fb/31/d?subset_id=2&fvd=n3&v=3') format('woff'),
-       url('https://use.typekit.net/af/665547/0000000000000000773598fb/31/a?subset_id=2&fvd=n3&v=3') format('opentype');
+  src: url('../fonts/typekit/665547_n3_l.woff2') format('woff2'),
+       url('../fonts/typekit/665547_n3_d.woff') format('woff'),
+       url('../fonts/typekit/665547_n3_a.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -18,9 +18,9 @@
 
 @font-face {
   font-family: 'ambroise-std';
-  src: url('https://use.typekit.net/af/4c37ea/00000000000000007735990a/31/l?subset_id=2&fvd=n4&v=3') format('woff2'),
-       url('https://use.typekit.net/af/4c37ea/00000000000000007735990a/31/d?subset_id=2&fvd=n4&v=3') format('woff'),
-       url('https://use.typekit.net/af/4c37ea/00000000000000007735990a/31/a?subset_id=2&fvd=n4&v=3') format('opentype');
+  src: url('../fonts/typekit/4c37ea_n4_l.woff2') format('woff2'),
+       url('../fonts/typekit/4c37ea_n4_d.woff') format('woff'),
+       url('../fonts/typekit/4c37ea_n4_a.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -29,9 +29,9 @@
 
 @font-face {
   font-family: 'ambroise-std';
-  src: url('https://use.typekit.net/af/b1994b/000000000000000077359907/31/l?subset_id=2&fvd=n7&v=3') format('woff2'),
-       url('https://use.typekit.net/af/b1994b/000000000000000077359907/31/d?subset_id=2&fvd=n7&v=3') format('woff'),
-       url('https://use.typekit.net/af/b1994b/000000000000000077359907/31/a?subset_id=2&fvd=n7&v=3') format('opentype');
+  src: url('../fonts/typekit/b1994b_n7_l.woff2') format('woff2'),
+       url('../fonts/typekit/b1994b_n7_d.woff') format('woff'),
+       url('../fonts/typekit/b1994b_n7_a.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -40,9 +40,9 @@
 
 @font-face {
   font-family: 'ambroise-std';
-  src: url('https://use.typekit.net/af/9c6e04/000000000000000077359917/31/l?subset_id=2&fvd=i3&v=3') format('woff2'),
-       url('https://use.typekit.net/af/9c6e04/000000000000000077359917/31/d?subset_id=2&fvd=i3&v=3') format('woff'),
-       url('https://use.typekit.net/af/9c6e04/000000000000000077359917/31/a?subset_id=2&fvd=i3&v=3') format('opentype');
+  src: url('../fonts/typekit/9c6e04_i3_l.woff2') format('woff2'),
+       url('../fonts/typekit/9c6e04_i3_d.woff') format('woff'),
+       url('../fonts/typekit/9c6e04_i3_a.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
   font-stretch: normal;
@@ -51,9 +51,9 @@
 
 @font-face {
   font-family: 'ambroise-std';
-  src: url('https://use.typekit.net/af/409d99/00000000000000007735990c/31/l?subset_id=2&fvd=i7&v=3') format('woff2'),
-       url('https://use.typekit.net/af/409d99/00000000000000007735990c/31/d?subset_id=2&fvd=i7&v=3') format('woff'),
-       url('https://use.typekit.net/af/409d99/00000000000000007735990c/31/a?subset_id=2&fvd=i7&v=3') format('opentype');
+  src: url('../fonts/typekit/409d99_i7_l.woff2') format('woff2'),
+       url('../fonts/typekit/409d99_i7_d.woff') format('woff'),
+       url('../fonts/typekit/409d99_i7_a.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
@@ -63,9 +63,9 @@
 /* --- calluna --- */
 @font-face {
   font-family: 'calluna';
-  src: url('https://use.typekit.net/af/428704/00000000000000007735d9f7/31/l?subset_id=2&fvd=n4&v=3') format('woff2'),
-       url('https://use.typekit.net/af/428704/00000000000000007735d9f7/31/d?subset_id=2&fvd=n4&v=3') format('woff'),
-       url('https://use.typekit.net/af/428704/00000000000000007735d9f7/31/a?subset_id=2&fvd=n4&v=3') format('opentype');
+  src: url('../fonts/typekit/428704_n4_l.woff2') format('woff2'),
+       url('../fonts/typekit/428704_n4_d.woff') format('woff'),
+       url('../fonts/typekit/428704_n4_a.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -74,9 +74,9 @@
 
 @font-face {
   font-family: 'calluna';
-  src: url('https://use.typekit.net/af/293f37/00000000000000007735da18/31/l?subset_id=2&fvd=n6&v=3') format('woff2'),
-       url('https://use.typekit.net/af/293f37/00000000000000007735da18/31/d?subset_id=2&fvd=n6&v=3') format('woff'),
-       url('https://use.typekit.net/af/293f37/00000000000000007735da18/31/a?subset_id=2&fvd=n6&v=3') format('opentype');
+  src: url('../fonts/typekit/293f37_n6_l.woff2') format('woff2'),
+       url('../fonts/typekit/293f37_n6_d.woff') format('woff'),
+       url('../fonts/typekit/293f37_n6_a.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -85,9 +85,9 @@
 
 @font-face {
   font-family: 'calluna';
-  src: url('https://use.typekit.net/af/4d2e44/00000000000000007735da0f/31/l?subset_id=2&fvd=n7&v=3') format('woff2'),
-       url('https://use.typekit.net/af/4d2e44/00000000000000007735da0f/31/d?subset_id=2&fvd=n7&v=3') format('woff'),
-       url('https://use.typekit.net/af/4d2e44/00000000000000007735da0f/31/a?subset_id=2&fvd=n7&v=3') format('opentype');
+  src: url('../fonts/typekit/4d2e44_n7_l.woff2') format('woff2'),
+       url('../fonts/typekit/4d2e44_n7_d.woff') format('woff'),
+       url('../fonts/typekit/4d2e44_n7_a.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -96,9 +96,9 @@
 
 @font-face {
   font-family: 'calluna';
-  src: url('https://use.typekit.net/af/401f20/00000000000000007735da0b/31/l?subset_id=2&fvd=i4&v=3') format('woff2'),
-       url('https://use.typekit.net/af/401f20/00000000000000007735da0b/31/d?subset_id=2&fvd=i4&v=3') format('woff'),
-       url('https://use.typekit.net/af/401f20/00000000000000007735da0b/31/a?subset_id=2&fvd=i4&v=3') format('opentype');
+  src: url('../fonts/typekit/401f20_i4_l.woff2') format('woff2'),
+       url('../fonts/typekit/401f20_i4_d.woff') format('woff'),
+       url('../fonts/typekit/401f20_i4_a.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
@@ -107,9 +107,9 @@
 
 @font-face {
   font-family: 'calluna';
-  src: url('https://use.typekit.net/af/ef2a7e/00000000000000007735da12/31/l?subset_id=2&fvd=i7&v=3') format('woff2'),
-       url('https://use.typekit.net/af/ef2a7e/00000000000000007735da12/31/d?subset_id=2&fvd=i7&v=3') format('woff'),
-       url('https://use.typekit.net/af/ef2a7e/00000000000000007735da12/31/a?subset_id=2&fvd=i7&v=3') format('opentype');
+  src: url('../fonts/typekit/ef2a7e_i7_l.woff2') format('woff2'),
+       url('../fonts/typekit/ef2a7e_i7_d.woff') format('woff'),
+       url('../fonts/typekit/ef2a7e_i7_a.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;

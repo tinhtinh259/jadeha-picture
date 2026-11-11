@@ -47,9 +47,9 @@ add_action('after_setup_theme', 'jadeha_theme_setup');
 function jadeha_theme_scripts() {
     wp_enqueue_style(
         'jadeha-fonts',
-        'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap',
+        get_template_directory_uri() . '/assets/css/google-fonts.css',
         array(),
-        null
+        '1.2.0'
     );
 
     wp_enqueue_style(
@@ -61,17 +61,17 @@ function jadeha_theme_scripts() {
 
     wp_enqueue_script(
         'tailwind-cdn',
-        'https://cdn.tailwindcss.com',
+        get_template_directory_uri() . '/assets/js/tailwindcss.js',
         array(),
-        null,
+        '3.4.1',
         false
     );
 
     wp_enqueue_script(
         'lucide-icons',
-        'https://unpkg.com/lucide@latest',
+        get_template_directory_uri() . '/assets/js/lucide.min.js',
         array(),
-        null,
+        '0.344.0',
         true
     );
 

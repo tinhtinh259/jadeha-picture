@@ -17,7 +17,7 @@
     <!-- Typekit Genuine Fonts: ambroise-std & calluna -->
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/assets/css/fonts.css'); ?>">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="<?php echo esc_url(get_template_directory_uri() . "/assets/js/tailwindcss.js"); ?>"></script>
     <script>
       tailwind.config = {
         theme: {
