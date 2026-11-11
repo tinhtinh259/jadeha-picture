@@ -124,7 +124,9 @@ class JadeHa_Auto_Setup {
             }
 
             if ($template === 'canvas') {
-                update_post_meta($page_id, '_wp_page_template', 'templates/canvas.html');
+                update_post_meta($page_id, '_wp_page_template', 'canvas');
+            } else {
+                update_post_meta($page_id, '_wp_page_template', 'default');
             }
 
             if ($is_front) {

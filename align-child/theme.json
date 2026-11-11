@@ -1,6 +1,15 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
+  "customTemplates": [
+    {
+      "name": "canvas",
+      "title": "Canvas (Blank)",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ],
   "templateParts": [
     {
       "area": "header",
