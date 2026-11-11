@@ -14,8 +14,30 @@ get_header();
   <?php
   if (have_posts()) :
       while (have_posts()) : the_post();
-          $page_content = get_the_content();
-          if (!empty(trim($page_content))) :
+          $custom_team = get_post_meta(get_the_ID(), '_jadeha_team_data', true);
+          if (!empty($custom_team) && is_array($custom_team)) :
+  ?>
+  <div class="space-y-16 md:space-y-20 mb-20 md:mb-28">
+    <?php foreach ($custom_team as $member) : 
+        $img = !empty($member['image']) ? $member['image'] : get_template_directory_uri() . '/assets/images/meet-the-team/jade-ha-405.jpg';
+        $name = !empty($member['name']) ? $member['name'] : '';
+        $bio  = !empty($member['bio']) ? $member['bio'] : '';
+    ?>
+    <article class="grid grid-cols-1 md:grid-cols-10 gap-8 md:gap-12 items-center">
+      <div class="md:col-span-4 aspect-[5/6] overflow-hidden bg-zinc-100 shadow-sm">
+        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($name); ?>" class="w-full h-full object-cover object-center" loading="lazy">
+      </div>
+      <div class="md:col-span-6 flex flex-col justify-center">
+        <h3 class="font-calluna font-bold text-[15px] tracking-[0.45px] uppercase text-[#333333] mb-3"><?php echo esc_html($name); ?></h3>
+        <p class="font-calluna text-[15px] leading-[2.3] tracking-[0.45px] text-[#000000]">
+          <?php echo nl2br(esc_html($bio)); ?>
+        </p>
+      </div>
+    </article>
+    <?php endforeach; ?>
+  </div>
+  <?php
+          elseif (!empty(trim(get_the_content()))) :
               the_content();
           else :
   ?>

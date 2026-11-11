@@ -14,8 +14,28 @@ get_header();
   <?php
   if (have_posts()) :
       while (have_posts()) : the_post();
-          $page_content = get_the_content();
-          if (!empty(trim($page_content))) :
+          $custom_testimonials = get_post_meta(get_the_ID(), '_jadeha_testimonials_data', true);
+          if (!empty($custom_testimonials) && is_array($custom_testimonials)) :
+  ?>
+  <div class="space-y-20 md:space-y-28 lg:space-y-32">
+    <?php foreach ($custom_testimonials as $item) : 
+        $img = !empty($item['image']) ? $item['image'] : get_template_directory_uri() . '/assets/images/testimonials/webjade_4847-edit.jpg';
+        $name = !empty($item['name']) ? $item['name'] : '';
+        $quote = !empty($item['quote']) ? $item['quote'] : '';
+    ?>
+    <article class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 items-center">
+      <div class="w-full aspect-[2/3] overflow-hidden bg-zinc-100 shadow-sm">
+        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($name); ?>" class="w-full h-full object-cover object-center" loading="lazy">
+      </div>
+      <div class="flex flex-col justify-center py-4 md:py-8">
+        <h2 class="font-ambroise text-[26px] sm:text-[34px] md:text-[40px] lg:text-[46px] font-light tracking-[0.04em] uppercase text-black leading-[1.3] mb-6 sm:mb-8 whitespace-pre-line"><?php echo esc_html($name); ?></h2>
+        <p class="font-calluna text-[16px] sm:text-[17.5px] leading-[2.1] md:leading-[2.3] tracking-[0.03em] text-[#111111]">“<?php echo nl2br(esc_html($quote)); ?>”</p>
+      </div>
+    </article>
+    <?php endforeach; ?>
+  </div>
+  <?php
+          elseif (!empty(trim(get_the_content()))) :
               the_content();
           else :
   ?>

@@ -374,7 +374,8 @@ class Jadeha_Nav_Walker extends Walker_Nav_Menu {
 }
 
 /**
- * Include Studio Media Gallery Manager
+ * Include Studio Media Gallery Manager & Editorial Content Managers
  */
 require_once get_template_directory() . '/inc/gallery-manager.php';
+require_once get_template_directory() . '/inc/content-managers.php';
 
